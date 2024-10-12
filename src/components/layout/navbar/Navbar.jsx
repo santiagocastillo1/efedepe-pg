@@ -1,20 +1,20 @@
+import { CartWidget } from "../../common/Card/cartWidget.css/CartWidget";
 import "./navbar.css";
 
 export const Navbar = () => {
-  let nombre = "feli";
-  const sumar = () => {
-    console.log(2 + 2);
-  };
-
   return (
     <>
-      <div className="container-navbar ">
+      <div className="container-navbar">
         <h2>EFEDEPE.PG</h2>
-        <h2>{nombre}</h2>
-        <li>stickers</li>
-        <li>vinilos</li>
-        <li>materas</li>
-        <button onClick={sumar}>sumar</button>
+
+        <ul>
+          <li>stickers</li>
+          <li>vinilos</li>
+          <li>materas</li>
+        </ul>
+        <div>
+          <CartWidget />
+        </div>
       </div>
     </>
   );
