@@ -1,9 +1,9 @@
-export const Card = () => {
+export const Card = ({ title, price, stock }) => {
   return (
     <div style={{ border: "2px solid black", width: "200px", height: "300px" }}>
-      <h2>Piña simetrica</h2>
-      <h3>$1000</h3>
-      <h3>Stock 15</h3>
+      <h2>Titulo: {title}</h2>
+      <h3>Precio: {price}</h3>
+      <h3>Stock: {stock}</h3>
     </div>
   );
 };

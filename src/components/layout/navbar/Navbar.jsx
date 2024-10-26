@@ -1,9 +1,16 @@
 import { CartWidget } from "../../common/Card/cartWidget/CartWidget";
 import "./navbar.css";
-export const Navbar = () => {
+
+export const Navbar = ({ darkMode }) => {
+  console.log("navbar", darkMode);
+
   return (
     <>
-      <div className="container-navbar">
+      <div
+        className={
+          darkMode ? "container-navbar-dark navbar" : " container-navbar navbar"
+        }
+      >
         <h2>EFEDEPE.PG</h2>
         <ul>
           <li>stickers</li>
