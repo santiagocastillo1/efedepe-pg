@@ -1,13 +1,34 @@
-import { Card } from "../../common/Card/card/Card";
+import { products } from "../../../products";
+import "./itemListContainer.css";
+import { useState, useEffect } from "react";
+import { ItemList } from "../../common/ItemList/ItemList";
 
-export const ItemListContainer = ({ darkMode }) => {
-  console.log("itemList", darkMode);
+let myProductspromise = new Promise((res, rej) => {
+  setTimeout(() => {
+    if (products.length === 0) {
+      rej("Productos Vacíos");
+    } else {
+      res(products);
+    }
+  }, 2000);
+});
+
+export const ItemListContainer = () => {
+  const [myProducts, setMyProducts] = useState([]);
+
+  useEffect(() => {
+    myProductspromise
+      .then((data) => {
+        setMyProducts(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
-    <div>
-      <Card title="nike" price={1200} stock={5} />
-      <Card />
-      <Card />
+    <div className="il-container">
+      <ItemList myProducts={myProducts} />
     </div>
   );
 };

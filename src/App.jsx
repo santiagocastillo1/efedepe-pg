@@ -19,8 +19,8 @@ function App() {
 
   return (
     <>
-      <button onClick={cambiarModo}>Cambiar modo</button>
       <Navbar darkMode={darkMode} />
+      <button onClick={cambiarModo}>Cambiar modo</button>
       <ItemListContainer darkMode={darkMode} />
       {/* <Footer /> */}
       {/* <Counter /> */}
