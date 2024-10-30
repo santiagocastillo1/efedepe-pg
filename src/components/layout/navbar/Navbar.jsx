@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CartWidget } from "../../common/Card/cartWidget/CartWidget";
 import "./navbar.css";
 
@@ -11,11 +12,20 @@ export const Navbar = ({ darkMode }) => {
           darkMode ? "container-navbar-dark navbar" : " container-navbar navbar"
         }
       >
-        <h2>EFEDEPE.PG</h2>
-        <ul>
-          <li>stickers</li>
-          <li>vinilos</li>
-          <li>materas</li>
+        <Link to={"/"}>
+          <img
+            src="https://res.cloudinary.com/dnbod0hzh/image/upload/v1729976869/876e8d28-3899-447c-9ed2-28a53a2aff4b_b03nyd.jpg"
+            alt=""
+            style={{
+              width: "100px",
+              height: "100px",
+            }}
+          />
+        </Link>
+        <ul style={{ display: "flex", gap: "10px" }}>
+          <li>Varios</li>
+          <li>Peliculas</li>
+          <li>Argentina</li>
         </ul>
         <div>
           <CartWidget />

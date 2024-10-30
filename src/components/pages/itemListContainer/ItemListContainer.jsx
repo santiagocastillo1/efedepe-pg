@@ -1,7 +1,7 @@
 import { products } from "../../../products";
 import "./itemListContainer.css";
 import { useState, useEffect } from "react";
-import { ItemList } from "../../common/ItemList/ItemList";
+import { ItemList } from "../ItemList/ItemList";
 
 let myProductspromise = new Promise((res, rej) => {
   setTimeout(() => {

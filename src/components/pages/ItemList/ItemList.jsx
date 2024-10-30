@@ -1,4 +1,4 @@
-import { Card } from "../Card/card/Card";
+import { Card } from "../../common/Card/card/Card";
 
 export const ItemList = ({ myProducts }) => {
   return (
