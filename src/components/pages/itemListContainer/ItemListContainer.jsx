@@ -2,29 +2,23 @@ import { products } from "../../../products";
 import "./itemListContainer.css";
 import { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
-
-let myProductspromise = new Promise((res, rej) => {
-  setTimeout(() => {
-    if (products.length === 0) {
-      rej("Productos Vacíos");
-    } else {
-      res(products);
-    }
-  }, 2000);
-});
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {
+  const { name } = useParams();
   const [myProducts, setMyProducts] = useState([]);
 
   useEffect(() => {
-    myProductspromise
-      .then((data) => {
-        setMyProducts(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    const UnaFraccion = products.filter(
+      (producto) => producto.category === name
+    );
+    const getProducts = new Promise((resolve) => {
+      resolve(name ? UnaFraccion : products);
+    });
+    getProducts.then((res) => {
+      setMyProducts(res);
+    });
+  }, [name]);
 
   return (
     <div className="il-container">

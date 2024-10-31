@@ -23,9 +23,9 @@ export const Navbar = ({ darkMode }) => {
           />
         </Link>
         <ul style={{ display: "flex", gap: "10px" }}>
-          <li>Varios</li>
-          <li>Peliculas</li>
-          <li>Argentina</li>
+          <Link to="/category/Varios">Varios</Link>
+          <Link to="/category/Peliculas">Peliculas</Link>
+          <Link to="/category/Argentina">Argentina</Link>
         </ul>
         <div>
           <CartWidget />
