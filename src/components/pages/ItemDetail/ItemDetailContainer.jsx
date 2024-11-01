@@ -12,7 +12,13 @@ const ItemDetailContainer = () => {
     let productSelected = products.find((producto) => producto.id === id);
     setMyProducts(productSelected);
   }, [id]);
-  return <ItemDetail myProducts={myProducts} />;
+  const agregarAlCarrito = (cantidad) => {
+    let objeto = { ...myProducts, quantity: cantidad };
+    console.log(objeto);
+  };
+  return (
+    <ItemDetail myProducts={myProducts} agregarAlCarrito={agregarAlCarrito} />
+  );
 };
 
 export default ItemDetailContainer;

@@ -1,18 +1,12 @@
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const CartContainer = () => {
-  const [counter, setCounter] = useState(0);
-
-  const sumar = () => {
-    setCounter(counter + 1);
-  };
-
-  useEffect(() => {}, []); // ---> array de dependencias
-
   return (
     <div>
-      <h2>{counter}</h2>
-      <button onClick={sumar}>sumar</button>
+      <h1>Aca el carrito</h1>
+      <Link to="/checkout" style={{ color: "black" }}>
+        Finalizar comprar
+      </Link>
     </div>
   );
 };
