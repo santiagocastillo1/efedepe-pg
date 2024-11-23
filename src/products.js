@@ -1,16 +1,16 @@
 export const products = [
+  // {
+  //   id: "1",
+  //   title: "Messi Copero",
+  //   price: 800,
+  //   stock: 12,
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dnbod0hzh/image/upload/v1729967236/9a4b358f-d988-4a94-b611-a5e12b766e4b_zfifqe.jpg",
+  //   description: "Messi con las dos copas America",
+  //   category: "Argentina",
+  // },
   {
-    id: "1",
-    title: "Messi Copero",
-    price: 800,
-    stock: 12,
-    imageUrl:
-      "https://res.cloudinary.com/dnbod0hzh/image/upload/v1729967236/9a4b358f-d988-4a94-b611-a5e12b766e4b_zfifqe.jpg",
-    description: "Messi con las dos copas America",
-    category: "Argentina",
-  },
-  {
-    id: "2",
+    //   id: "2",
     title: "Dibu Martinez",
     price: 800,
     stock: 15,
@@ -19,18 +19,18 @@ export const products = [
     description: "Dibu festejando post final de la copa America",
     category: "Argentina",
   },
+  // {
+  //   id: "3",
+  //   title: "Smile",
+  //   price: 800,
+  //   stock: 10,
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dnbod0hzh/image/upload/v1729967254/c62e590c-e40a-4a55-ae2b-701e7b72e528_srgrk1.jpg",
+  //   description: "Carita feliz bien fachera",
+  //   category: "Varios",
+  // },
   {
-    id: "3",
-    title: "Smile",
-    price: 800,
-    stock: 10,
-    imageUrl:
-      "https://res.cloudinary.com/dnbod0hzh/image/upload/v1729967254/c62e590c-e40a-4a55-ae2b-701e7b72e528_srgrk1.jpg",
-    description: "Carita feliz bien fachera",
-    category: "Varios",
-  },
-  {
-    id: "4",
+    // id: "4",
     title: "Heart",
     price: 800,
     stock: 16,
@@ -40,7 +40,7 @@ export const products = [
     category: "Varios",
   },
   {
-    id: "5",
+    // id: "5",
     title: "Bellota",
     price: 800,
     stock: 8,
@@ -50,7 +50,7 @@ export const products = [
     category: "Peliculas",
   },
   {
-    id: "6",
+    // id: "6",
     title: "Ted",
     price: 800,
     stock: 4,

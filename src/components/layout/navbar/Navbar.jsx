@@ -3,8 +3,6 @@ import { CartWidget } from "../../common/Card/cartWidget/CartWidget";
 import "./navbar.css";
 
 export const Navbar = ({ darkMode }) => {
-  console.log("navbar", darkMode);
-
   return (
     <>
       <div
