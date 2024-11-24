@@ -1,6 +1,3 @@
-//exportacion del contexto
-//exportacion del componente de react que provea el contexto
-
 import { createContext, useState } from "react";
 export const CartContext = createContext();
 
