@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { db } from "../../../firebaseConfig";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 
 const Checkout = () => {
-  const { cart, getTotalAmount } = useContext(CartContext);
+  const { cart, getTotalAmount, resetCart } = useContext(CartContext);
 
   const [orderId, setOrderId] = useState(null);
+
   const [userInfo, setUserInfo] = useState({
     name: "",
     email: "",
@@ -22,7 +23,17 @@ const Checkout = () => {
       total: total,
     };
     let refCollection = collection(db, "orders");
-    addDoc(refCollection, order).then((res) => setOrderId(res.id));
+    addDoc(refCollection, order).then((res) => {
+      setOrderId(res.id);
+      resetCart();
+    });
+    let refCol = collection(db, "products");
+    order.items.forEach((item) => {
+      let refDoc = doc(refCol, item.id);
+      updateDoc(refDoc, { stock: item.stock - item.quantity });
+    });
+
+    fetch("users");
   };
 
   const capturarInfo = (evento) => {
